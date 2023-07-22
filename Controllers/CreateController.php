@@ -1,8 +1,5 @@
 <?php
 
-include('../Handlers/ConnectionHandler.php');
-include('../Handlers/ResponseHandler.php');
-
 $judul = $_POST['judul'];
 $pengarang = $_POST['pengarang'];
 $tahun_terbit = $_POST['tahun_terbit'];
