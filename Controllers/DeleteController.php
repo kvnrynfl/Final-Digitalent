@@ -1,8 +1,5 @@
 <?php
 
-include('../Handlers/ConnectionHandler.php');
-include('../Handlers/ResponseHandler.php');
-
 $id = $_POST['id'];
 
 $query = "DELETE FROM buku WHERE id = $id";
