@@ -1,8 +1,5 @@
 <?php
 
-include('../Handlers/ConnectionHandler.php');
-include('../Handlers/ResponseHandler.php');
-
 $id = $_POST['id'];
 $judul = $_POST['judul'];
 $pengarang = $_POST['pengarang'];
