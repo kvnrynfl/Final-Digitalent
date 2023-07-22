@@ -1,8 +1,5 @@
 <?php
 
-include('../Handlers/ConnectionHandler.php');
-include('../Handlers/ResponseHandler.php');
-
 $query = "SELECT * FROM buku";
 $result = mysqli_query($conn, $query);
 
