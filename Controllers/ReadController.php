@@ -1,6 +1,12 @@
 <?php
 
-$query = "SELECT * FROM buku";
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $query = "SELECT * FROM buku WHERE id = $id";
+} else {
+    $query = "SELECT * FROM buku";
+}
+
 $result = mysqli_query($conn, $query);
 
 $bookData = [];
