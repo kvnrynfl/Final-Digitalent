@@ -21,13 +21,14 @@
     <div class="container" id="test">
         <!-- Button Create -->
         <div class="mt-2 mb-2">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">Create New Data</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal" onclick="refreshCreateModal()">Create New Data</button>
         </div>
         <!-- Tabel Buku -->
         <table id="BookTable" class="table table-striped table-bordered table-responsive table-hover">
             <thead>
                 <tr>
                     <th scope="col">NO</th>
+                    <th scope="col">ID</th>
                     <th scope="col">Judul</th>
                     <th scope="col">Pengarang</th>
                     <th scope="col">Tahun Terbit</th>
@@ -64,6 +65,8 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                        <div class="alert alert-danger" id="alert-form-create" role="alert">
+                        </div>
                         <div class="row mb-3">
                             <label for="create-judul" class="col-sm-4 col-form-label">Judul</label>
                             <div class="col-sm-8">
@@ -91,7 +94,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" onclick="createData()">Submit</button>
+                        <button type="button" class="btn btn-primary" onclick="createBook()">Submit</button>
                     </div>
                 </div>
             </div>
@@ -105,8 +108,9 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- style="display: none;" -->
-                        <div class="row mb-3">
+                        <div class="alert alert-danger" id="alert-form-update" role="alert">
+                        </div>
+                        <div class="row mb-3" style="display: none;">
                             <label for="update-id" class="col-sm-4 col-form-label">ID</label>
                             <div class="col-sm-8">
                                 <input type="number" class="form-control text-center" name="update-id" id="update-id" disabled>
