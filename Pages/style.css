@@ -6,3 +6,8 @@
 #BookTable th {
   vertical-align: middle;
 }
+
+#alert-form-create,
+#alert-form-update {
+  display: none;
+}
